@@ -1,0 +1,315 @@
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  10
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  1.4802973661668753e-16
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  20
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  1.924386576016938e-15
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  40
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  4.440892098500626e-16
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  80
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  4.04121180963557e-14
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  160
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  2.057613338971957e-14
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  320
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  1.6697754290362354e-13
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  640
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  3.1436335016602848e-12
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  10
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  1.4802973661668753e-16
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  20
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  2.0724163126336257e-15
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  40
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  2.220446049250313e-15
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  80
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  1.1161442140898241e-13
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  160
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  1.386298483415279e-13
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  320
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  1.0140036958243097e-13
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  640
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  7.755796005426419e-12
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  10
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  2.220446049250313e-15
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  20
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  1.1546319456101628e-14
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  40
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  7.549516567451064e-15
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  80
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  2.6068036618198676e-13
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  160
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  4.6037248087789827e-14
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  320
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  2.6985820985222137e-13
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  laplace
+Number of Nodes:  640
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  1.2222075203756807e-11
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  10
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  0.0768242460063584
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  20
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  0.018002711728128173
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  40
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  0.004313303257980072
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  80
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  0.0010535258021954208
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  160
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  0.00026021836123457653
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  320
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  6.46559002195346e-05
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  640
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  1.6113948398399636e-05
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  10
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  0.07682424600635795
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  20
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  0.018002711728129173
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  40
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  0.0043133032579807384
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  80
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  0.0010535258021254768
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  160
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  0.0002602183611646325
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  320
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  6.465589973503327e-05
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  640
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  1.6113945003670693e-05
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  10
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  0.0768242460063594
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  20
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  0.018002711728128507
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  40
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  0.004313303257976853
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  80
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  0.0010535258022356109
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  160
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  0.0002602183612790965
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  320
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  6.46558999024549e-05
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  poisson
+Number of Nodes:  640
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  1.611394692158097e-05
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  10
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  0.03292544856375079
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  20
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  0.008071553973779011
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  40
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  0.0019604866180889524
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  80
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  0.000479188774594852
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  160
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  0.00011837122834823521
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  320
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  2.941422547081407e-05
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  640
+Condition:  ['dirichlet', 'dirichlet']
+Relative Error:  7.3549299462460915e-06
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  10
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  0.09269450389108191
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  20
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  0.02161458214937903
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  40
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  0.0051727872276074865
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  80
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  0.001267708722931582
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  160
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  0.000313168295797861
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  320
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  7.781736323736466e-05
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  640
+Condition:  ['neumann', 'dirichlet']
+Relative Error:  1.939489951227613e-05
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  10
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  0.09269450389108155
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  20
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  0.02161458214938139
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  40
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  0.005172787227616313
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  80
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  0.0012677087228845085
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  160
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  0.00031316829573183047
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  320
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  7.781736371201275e-05
+Program: /home/yamaguchi/numerical-analysis-modules/doc/fem1d/../../example/fem1d.py
+Problem:  helmholtz
+Number of Nodes:  640
+Condition:  ['dirichlet', 'neumann']
+Relative Error:  1.9394899115232622e-05
