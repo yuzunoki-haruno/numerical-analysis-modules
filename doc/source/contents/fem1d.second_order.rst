@@ -1,5 +1,5 @@
-1D Finite Element Method: Linear Shape Function
-================================================
+1D Finite Element Method: Second-order Shape Function
+========================================
 
 Laplace方程式 :eq:`Laplace方程式` 及びPoisson方程式 :eq:`Poisson` 、Helmholtz方程式 :eq:`Helmholtz` の境界値問題を本モジュールで解いた結果を示す。
 
@@ -49,11 +49,11 @@ Laplace問題
 
    x_\max = 4
 
-.. figure:: ./fem1d.first_order/laplace_result.png
+.. figure:: ./fem1d.second_order/laplace_result.png
 
-    解析解と数値解の比較（両端にDirichlet境界条件を課し、節点数を40とした場合）
+    解析解と数値解の比較（両端にDirichlet境界条件を課し、節点数を641とした場合）
 
-.. figure:: ./fem1d.first_order/laplace_relative_error.png
+.. figure:: ./fem1d.second_order/laplace_relative_error.png
 
     相対誤差の節点数への依存性
 
@@ -70,11 +70,11 @@ Poisson問題
 
    x_\max = 4
 
-.. figure:: ./fem1d.first_order/poisson_result.png
+.. figure:: ./fem1d.second_order/poisson_result.png
 
-    解析解と数値解の比較（両端にDirichlet境界条件を課し、節点数を40とした場合）
+    解析解と数値解の比較（両端にDirichlet境界条件を課し、節点数を641とした場合）
 
-.. figure:: ./fem1d.first_order/poisson_relative_error.png
+.. figure:: ./fem1d.second_order/poisson_relative_error.png
 
     相対誤差の節点数への依存性
 
@@ -91,10 +91,10 @@ Helmholtz問題
 
    x_\max = 4
 
-.. figure:: ./fem1d.first_order/helmholtz_result.png
+.. figure:: ./fem1d.second_order/helmholtz_result.png
 
-    解析解と数値解の比較（両端にDirichlet境界条件を課し、節点数を40とした場合）
+    解析解と数値解の比較（両端にDirichlet境界条件を課し、節点数を641とした場合）
 
-.. figure:: ./fem1d.first_order/helmholtz_relative_error.png
+.. figure:: ./fem1d.second_order/helmholtz_relative_error.png
 
     相対誤差の節点数への依存性

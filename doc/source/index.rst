@@ -6,7 +6,9 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   contents/fem/fem1d.rst
+   contents/fem1d.first_order.rst
+   contents/fem1d.second_order.rst
+   contents/fem1d.comparison.rst
 
 API Description
 ----------------------------------------
