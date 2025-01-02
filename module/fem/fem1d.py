@@ -2,17 +2,30 @@ import numpy as np
 from numpy.typing import NDArray
 from scipy.sparse import lil_matrix
 
-from module.discretization import BoundaryCondition, LineMesh
+from module.discretization import BoundaryCondition, LineMesh, LineMeshHighOrder
 
 
 class Fem1d:
     """一次元有限要素法"""
 
-    def __init__(self, mesh: LineMesh) -> None:
-        """一次元有限要素法"""
+    def __init__(self, mesh: LineMesh | LineMeshHighOrder) -> None:
+        """一次元有限要素法
+
+        Args:
+            mesh (LineMesh | LineMeshHighOrder): メッシュデータ
+
+        Raises:
+            ValueError: 不正なメッシュデータを入力した場合に発生
+        """
         self.mesh = mesh
-        self._laplacian = _laplacian_matrix(mesh)
-        self._term = _term_matrix(mesh)
+        if isinstance(mesh, LineMesh):
+            self._laplacian = _laplacian_matrix(mesh)
+            self._term = _term_matrix(mesh)
+        elif isinstance(mesh, LineMeshHighOrder):
+            self._laplacian = _laplacian_matrix_high_order(mesh)
+            self._term = _term_matrix_high_order(mesh)
+        else:
+            raise ValueError
 
     @property
     def laplacian_matrix(self) -> lil_matrix:
@@ -106,7 +119,7 @@ def _laplacian_matrix(mesh: LineMesh) -> lil_matrix:
 
 
 def _term_matrix(mesh: LineMesh) -> lil_matrix:
-    """一般的な項に対応する行列
+    """一般的な項に対応する行列（一次要素）
 
     Args:
         mesh (LineMesh): メッシュデータ
@@ -122,4 +135,54 @@ def _term_matrix(mesh: LineMesh) -> lil_matrix:
         matrix[j, j] += h / 3
         matrix[i, j] += h / 6
         matrix[j, i] += h / 6
+    return matrix
+
+
+def _laplacian_matrix_high_order(mesh: LineMeshHighOrder) -> lil_matrix:
+    """Laplace作用素に対応する行列（二次要素）
+
+    Args:
+        mesh (LineMesh): メッシュデータ
+
+    Returns:
+        lil_matrix: Laplace作用素に対応する行列
+    """
+    n_node = mesh.n_node
+    matrix = lil_matrix((n_node, n_node))
+    for i, j, k in mesh.element_nodes:
+        h = mesh.x[j] - mesh.x[i]
+        matrix[i, i] += 7 / 3 / h
+        matrix[i, j] += 1 / 3 / h
+        matrix[i, k] -= 8 / 3 / h
+        matrix[j, i] += 1 / 3 / h
+        matrix[j, j] += 7 / 3 / h
+        matrix[j, k] -= 8 / 3 / h
+        matrix[k, i] -= 8 / 3 / h
+        matrix[k, j] -= 8 / 3 / h
+        matrix[k, k] += 16 / 3 / h
+    return matrix
+
+
+def _term_matrix_high_order(mesh: LineMeshHighOrder) -> lil_matrix:
+    """一般的な項に対応する行列（二次要素）
+
+    Args:
+        mesh (LineMesh): メッシュデータ
+
+    Returns:
+        lil_matrix: 一般的な項に対応する行列
+    """
+    n_node = mesh.n_node
+    matrix = lil_matrix((n_node, n_node))
+    for i, j, k in mesh.element_nodes:
+        h = mesh.x[j] - mesh.x[i]
+        matrix[i, i] += h * 2 / 15
+        matrix[i, j] -= h / 30
+        matrix[i, k] += h / 15
+        matrix[j, i] -= h / 30
+        matrix[j, j] += h * 2 / 15
+        matrix[j, k] += h / 15
+        matrix[k, i] += h / 15
+        matrix[k, j] += h / 15
+        matrix[k, k] += h * 8 / 15
     return matrix

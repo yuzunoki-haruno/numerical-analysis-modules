@@ -3,7 +3,7 @@ import numpy as np
 from scipy.sparse import csc_matrix, lil_matrix
 from scipy.sparse.linalg import splu
 
-from module.discretization import LineMesh
+from module.discretization import LineMesh, LineMeshHighOrder
 from module.fem import Fem1d
 
 if __name__ == "__main__":
@@ -16,10 +16,16 @@ if __name__ == "__main__":
     parser.add_argument("--xmax", type=float, required=True, help="Maximum of x-axis.")
     parser.add_argument("--n_node", type=int, required=True, help="Number of nodes.")
     parser.add_argument("--condition", type=str, required=True, nargs=2, help="Boundary condition.")
-    parser.add_argument("--image_path", type=str, default="", help="Display log information.")
+    parser.add_argument("--save_path", type=str, default="", help="Save image.")
+    parser.add_argument("--show_plot", action="store_true", help="Plot results.")
+    parser.add_argument("--high_order", action="store_true", help="Use 2nd-order elements.")
     args = parser.parse_args()
 
-    mesh = LineMesh(args.n_node, args.xmin, args.xmax)
+    mesh: LineMesh | LineMeshHighOrder
+    if args.high_order:
+        mesh = LineMeshHighOrder(args.n_node, args.xmin, args.xmax)
+    else:
+        mesh = LineMesh(args.n_node, args.xmin, args.xmax)
     mesh.conditions = args.condition
     fem = Fem1d(mesh)
 
@@ -59,7 +65,7 @@ if __name__ == "__main__":
     print("Condition: ", mesh.conditions)
     print("Relative Error: ", relative_error)
 
-    if args.image_path:
+    if args.save_path or args.show_plot:
         xmin, xmax = mesh.x.min(), mesh.x.max()
         ymin, ymax = min(sol.min(), u.min()), max(sol.max(), u.max())
         fig, ax = plt.subplots()
@@ -72,4 +78,7 @@ if __name__ == "__main__":
         ax.tick_params(axis="both", direction="in")
         ax.legend()
         fig.tight_layout()
-        fig.savefig(args.image_path)
+        if args.show_plot:
+            plt.show()
+        if args.save_path:
+            fig.savefig(args.save_path)
