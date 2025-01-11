@@ -18,6 +18,11 @@ class TestDiscretizedRegion1D:
         np.testing.assert_equal(discretized_region.x, [-2, -1.5, -1, -0.5, 0, 0.5, 1])
         np.testing.assert_equal(discretized_region.unit_normals, [-1, 1])
 
+    def test_init_number_of_nodes_exception(self):
+        n_node, xmin, xmax = 1, -2.0, 1.0
+        with pytest.raises(ValueError):
+            DiscretizedRegion1D(n_node, xmin, xmax)
+
     @pytest.mark.parametrize("conditions", itertools.product(["dirichlet", "neumann"], repeat=2))
     def test_init_conditions(self, conditions):
         n_node, xmin, xmax, conditions = 7, -2.0, 1.0, list(conditions)

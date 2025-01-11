@@ -17,7 +17,18 @@ class DiscretizedRegion1D:
             xmin (float): 一次元領域の下限
             xmax (float): 一次元領域の上限
             conditions (List[str] | None, optional): 一次元領域に課された境界条件. Defaults to None.
+
+        Raises:
+            ValueError: 節点数n_nodeが1以下の場合に発生
+            ValueError: 上限xmaxが下限xmin以下の場合に発生
         """
+        if n_node < 2:
+            message = "The number of nodes `n_node` must be an integer greater than 1."
+            raise ValueError(message)
+        if xmax <= xmin:
+            message = "The upper limit `xmax` must be greater than the lower limit `xmin`."
+            raise ValueError
+
         self._x = np.linspace(xmin, xmax, num=n_node)
         self._boundary_nodes = [0, n_node - 1]
         self._conditions = self._set_boundary_conditions(conditions)
