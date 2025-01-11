@@ -61,6 +61,13 @@ class LineMeshHighOrder(DiscretizedRegion1D):
             xmax (float): 一次元領域の上限
             conditions (List[str] | None, optional): 一次元領域に課された境界条件. Defaults to None.
         """
+        if n_node < 3 or (n_node % 2) == 0:
+            message = "The number of nodes `n_node` must be an odd number greater than or equal to 3."
+            raise ValueError(message)
+        if xmax <= xmin:
+            message = "The upper limit `xmax` must be greater than the lower limit `xmin`."
+            raise ValueError
+
         super().__init__(n_node, xmin, xmax, conditions)
         n_element = n_node // 2
         self._element_nodes = [[2 * i, 2 * (i + 1), 2 * i + 1] for i in range(n_element)]

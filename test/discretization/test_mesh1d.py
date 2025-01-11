@@ -22,6 +22,11 @@ class TestLineMesh:
         np.testing.assert_equal(mesh.element_nodes, [[0, 1], [1, 2], [2, 3]])
         np.testing.assert_equal(mesh.unit_normals, [-1, 1])
 
+    def test_init_number_of_nodes_exception(self):
+        n_node, xmin, xmax = 1, -2.0, 1.0
+        with pytest.raises(ValueError):
+            LineMesh(n_node, xmin, xmax)
+
     @pytest.mark.parametrize("conditions", itertools.product(["dirichlet", "neumann"], repeat=2))
     def test_init_conditions(self, conditions):
         n_node, xmin, xmax, conditions = 4, -2.0, 1.0, list(conditions)
@@ -57,6 +62,16 @@ class TestLineMeshHighOrder:
         np.testing.assert_equal(mesh.x, [-2, -1, 0, 1, 2, 3, 4])
         np.testing.assert_equal(mesh.element_nodes, [[0, 2, 1], [2, 4, 3], [4, 6, 5]])
         np.testing.assert_equal(mesh.unit_normals, [-1, 1])
+
+    def test_init_number_of_nodes_exception_smaller(self):
+        n_node, xmin, xmax = 2, -2.0, 1.0
+        with pytest.raises(ValueError):
+            LineMeshHighOrder(n_node, xmin, xmax)
+
+    def test_init_number_of_nodes_exception_even(self):
+        n_node, xmin, xmax = 10, -2.0, 1.0
+        with pytest.raises(ValueError):
+            LineMeshHighOrder(n_node, xmin, xmax)
 
     @pytest.mark.parametrize("conditions", itertools.product(["dirichlet", "neumann"], repeat=2))
     def test_init_conditions(self, conditions):
