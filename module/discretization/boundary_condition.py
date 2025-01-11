@@ -39,7 +39,10 @@ class BoundaryCondition:
         elif string in cls.NEUMANN_STRINGS:
             return cls.NEUMANN
         else:
-            raise ValueError
+            message = "An invalid string was entered. The strings that can be entered is as follows:\n"
+            message += f"  - BoundaryCondition.DIRICHLET: {BoundaryCondition.DIRICHLET_STRINGS}\n"
+            message += f"  - BoundaryCondition.NEUMANN  : {BoundaryCondition.NEUMANN_STRINGS}"
+            raise ValueError(message)
 
     @classmethod
     def from_strings(cls, strings: List[str]) -> List[str]:
