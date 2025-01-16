@@ -36,8 +36,15 @@ class TestDiscretizedRegion1D:
         discretized_region.conditions = conditions
         assert discretized_region.conditions == conditions
 
-    def test_set_conditions_exception(self):
+    def test_set_conditions_exception_invalid_label(self):
         n_node, xmin, xmax = 7, -2.0, 1.0
         discretized_region = DiscretizedRegion1D(n_node, xmin, xmax)
         with pytest.raises(ValueError):
             discretized_region.conditions = ["invalid", "condition"]
+
+    @pytest.mark.parametrize("size", [1, 3])
+    def test_set_conditions_exception_invalid_length(self, size):
+        n_node, xmin, xmax = 7, -2.0, 1.0
+        discretized_region = DiscretizedRegion1D(n_node, xmin, xmax)
+        with pytest.raises(IndexError):
+            discretized_region.conditions = ["dirichlet"] * size

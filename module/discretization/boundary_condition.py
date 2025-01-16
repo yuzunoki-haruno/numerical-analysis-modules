@@ -83,3 +83,11 @@ class BoundaryCondition:
         """
         condition = cls.from_string(condition)
         return [cls.from_string(s) == condition for s in strings]
+
+    @classmethod
+    def check_size(cls, conditions: List[str], size: int) -> bool:
+        if len(conditions) == size:
+            return True
+        else:
+            message = f"The length of the list `conditions` must be {size}, but it is {len(conditions)}."
+            raise IndexError(message)

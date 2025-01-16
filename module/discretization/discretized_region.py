@@ -21,6 +21,7 @@ class DiscretizedRegion1D:
         Raises:
             ValueError: 節点数n_nodeが1以下の場合に発生
             ValueError: 上限xmaxが下限xmin以下の場合に発生
+            IndexError: 境界条件のリストに過不足がある場合に発生
         """
         if n_node < 2:
             message = "The number of nodes `n_node` must be an integer greater than 1."
@@ -91,4 +92,5 @@ class DiscretizedRegion1D:
         if conditions is None:
             return BoundaryCondition.from_strings(["dirichlet", "dirichlet"])
         else:
+            BoundaryCondition.check_size(conditions, 2)
             return BoundaryCondition.from_strings(conditions)
